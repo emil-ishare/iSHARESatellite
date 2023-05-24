@@ -185,13 +185,12 @@ ishareConfig:
     postgres_connection_url: postgresql://admin:adminpw@app-postgres:5432/ishare?sslmode=disable
 ```
 
-Open *app-mw-config-template.yaml* file in a text editor. Locate the `postgres_connection_url` subsection. Change the `adminpw` part of the string to the passwords you configured two snippets above; in the `docker-compose-mw-template.yaml` file. Look at the below snippet for reference: 
+Open *app-mw-config-template.yaml* file in a text editor. Locate the `offchainDb_connection_url` subsection. Change the `password` part of the string to the passwords you configured two snippets above; in the `docker-compose-mw-template.yaml` file. Look at the below snippet for reference: 
 
 ```yaml
 ishareConfig:
   middlewareConfig:
-    postgres_connection_url:
-      postgresql://admin:adminpw@app-postgres:5432/ishare?sslmode=disable
+    offchainDb_connection_url: postgresql://postgres:password@sat-offchaindb:5432/offchaindb?sslmode=disable
 ```
 
 ### Steps to configure password for Application Keycloak service
